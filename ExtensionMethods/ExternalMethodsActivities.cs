@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ExtensionMethods
@@ -23,6 +24,10 @@ namespace ExtensionMethods
         {
             return char.ToUpper(s[0]) + s.Substring(1).ToLower();
         }
-        
+        public static string DeleteVowels(this string s)
+        {
+            return Regex.Replace(s, "[aeyioąęuóAEYIOĄĘUÓ]", "");
+        }
+
     }
 }
