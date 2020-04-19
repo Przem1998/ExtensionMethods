@@ -39,8 +39,7 @@ namespace ExtensionMethods
             {
                 afterTransform.Foreground = new SolidColorBrush(Colors.Black);
                 if (UpperLowerString.IsChecked == true) afterTransform.Content = "Przekształcony napis: " + _Word.UpperEvenLetter();
-                
-
+                else if (UpperLetterFirst.IsChecked == true) afterTransform.Content = "Przekształcony napis: " + _Word.UpperFirstLetter();
             }
         }
 
