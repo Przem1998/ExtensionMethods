@@ -25,7 +25,9 @@
             <RadioButton GroupName="Options" x:Name="UpperLowerString" Content="Zamień małe litery na duże i odwortnie" IsChecked="True"/>
             <RadioButton GroupName="Options" x:Name="UpperLetterFirst" Content="Zamień pierwszą literę na wielką"/>
             <RadioButton GroupName="Options" x:Name="DeleteVowels" Content="Usuwanie samogłosek"/>
-
+            <RadioButton GroupName="Options" x:Name="AmountOfWordsInString" Content="Ilość wyrazów w napisie" Checked="CountOfWords_Checked"/>
+            <RadioButton GroupName="Options" x:Name="CountLengthOfWords" Content="Licz długości wyrazów w napisie" Checked="CountLengthOfWords_Checked"/>    
+            <RadioButton GroupName="Options" x:Name="CheckSentence" Content="Sprawdź czy napis jest zdaniem" Checked="CheckSentence_Checked"/>
         </StackPanel>
     </Grid>
 </Window>

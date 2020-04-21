@@ -38,6 +38,24 @@ namespace ExtensionMethods
             }
             return w;
         }
+        public static int[] LengthInscriptions(this string s)
+        {
+
+            int[] LengthString = new int[s.CountWordsInString()];
+
+            var words = s.Split(' ');
+            int i = 0;
+            foreach (string ws in words)
+            {
+                if (IsWord(ws))
+                {
+                    LengthString[i] = ws.Length;
+                    i++;
+                }
+            }
+
+            return LengthString;
+        }
         private static bool IsWord(string s)
         {
             int l = 0; //count  leters/punctuation chars
@@ -86,8 +104,15 @@ namespace ExtensionMethods
             }
             return false;
         }
+        public static bool IsSentence(this string s)
+        {
+            bool isContainsBigLetter = char.IsUpper(s[0]);
+            bool isContainsPoint = char.IsPunctuation(s[s.Length - 1]);
+            if (isContainsBigLetter && isContainsPoint) return true;
+            else return false;
+        }
 
-    
+
     }
 }
-}
+

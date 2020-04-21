@@ -42,6 +42,21 @@ namespace ExtensionMethods
                 else if (UpperLetterFirst.IsChecked == true) afterTransform.Content = "Przekształcony napis: " + _Word.UpperFirstLetter();
                 else if (UpperLetterFirst.IsChecked == true) afterTransform.Content = "Przekształcony napis: " + _Word.UpperFirstLetter();
                 else if (DeleteVowels.IsChecked == true) afterTransform.Content = "Przekształcony napis: " + _Word.DeleteVowels();
+                else if (AmountOfWordsInString.IsChecked == true) afterTransform.Content = "Ilość wyrazów w napisie: " + _Word.CountWordsInString();
+                else if (CountLengthOfWords.IsChecked == true)
+                {
+                    string temp = "";
+                    foreach(int i in _Word.LengthInscriptions())
+                    {
+                       temp+= "Długości napisów "+Convert.ToString(i);
+                    }
+                    afterTransform.Content = temp;
+                }
+
+                else if (CheckSentence.IsChecked == true) afterTransform.Content = _Word.IsSentence() == true ? "Wprowadzony napis jest zdaniem" : "Wprowadzony napis nie jest zdaniem";
+
+
+
             }
         }
 
