@@ -40,16 +40,10 @@ namespace ExtensionMethods
                 afterTransform.Foreground = new SolidColorBrush(Colors.Black);
                 if (UpperLowerString.IsChecked == true) afterTransform.Content = "Przekształcony napis: " + _Word.UpperEvenLetter();
                 else if (UpperLetterFirst.IsChecked == true) afterTransform.Content = "Przekształcony napis: " + _Word.UpperFirstLetter();
+                else if (UpperLetterFirst.IsChecked == true) afterTransform.Content = "Przekształcony napis: " + _Word.UpperFirstLetter();
                 else if (DeleteVowels.IsChecked == true) afterTransform.Content = "Przekształcony napis: " + _Word.DeleteVowels();
-                else if (CountOfWords.IsChecked == true) afterTransform.Content = "Ilość wyrazów w napisie: " + _Word.CountWordsInString();
-             }
+            }
         }
 
-
-        private void UpperLowerString_Checked(object sender, RoutedEventArgs e) => ExcecuteActivity.Content = "Przekształć";
-        private void DeleteVowels_Checked(object sender, RoutedEventArgs e)=>   ExcecuteActivity.Content = "Usuń";
-        private void CountOfWords_Checked(object sender, RoutedEventArgs e) => ExcecuteActivity.Content = "Przelicz";
-        private void CheckSentence_Checked(object sender, RoutedEventArgs e) => ExcecuteActivity.Content = "Sprawdź";
-        private void MostContainsElement_Checked(object sender, RoutedEventArgs e) => ExcecuteActivity.Content = "Zwróć";
     }
 }

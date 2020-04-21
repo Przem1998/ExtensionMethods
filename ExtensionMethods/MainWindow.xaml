@@ -5,30 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExtensionMethods"
         mc:Ignorable="d"
-            Title="Metody Rozszerzające" Height="450" Width="460">
+            Title="Metody Rozszerzające" Height="450" Width="400
+        ">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition MaxHeight="50"/>
             <RowDefinition MaxHeight="50"/>
-            <RowDefinition MaxHeight="150"/>
+            <RowDefinition MaxHeight="100"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Height="40" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
             <Label Content="Wprowadź napis" Width="100" Height="25" />
             <TextBox Text="" Width="200" Height="25" x:Name="inputWord"/>
-            <Button x:Name="ExcecuteActivity" Content="Przekształć" Height="25" Click="TransformString_Click"/>
+            <Button Content="Przekształć" Height="25" Click="TransformString_Click"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Height="50" Orientation="Horizontal"  VerticalAlignment="Top" Margin="10,0,0,0">
             <Label Content="" x:Name="afterTransform"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Margin="10,0,0,0">
-            <RadioButton GroupName="Options" x:Name="UpperLowerString" Content="Zamień małe litery na duże i odwortnie" IsChecked="True" Checked="UpperLowerString_Checked"/>
-            <RadioButton GroupName="Options" x:Name="UpperLetterFirst" Content="Zamień pierwszą literę na wielką" Checked="UpperLowerString_Checked"/>
-            <RadioButton GroupName="Options" x:Name="DeleteVowels" Content="Usuwanie samogłosek" Checked="DeleteVowels_Checked"/>
-            <RadioButton GroupName="Options" x:Name="CountOfWords" Content="Ilość wyrazów w napisie" Checked="CountOfWords_Checked"/>
-            <RadioButton GroupName="Options" x:Name="CountLengthWords" Content="Licz długości wyrazów w napisie" Checked="CountOfWords_Checked"/>
-            <RadioButton GroupName="Options" x:Name="CheckSentence" Content="Sprawdź czy napis jest zdaniem" Checked="CheckSentence_Checked"/>
-            <RadioButton GroupName="Options" x:Name="MostContainsElement" Content="Zwróć element, który występuje najwięcej razy" Checked="MostContainsElement_Checked"/>
-            <RadioButton GroupName="Options" x:Name="ReturnDictionary" Content="Zwróć słownik, w którym kluczami są elementy, a wartościami ilości powtórzeń" Checked="MostContainsElement_Checked"/>
+            <RadioButton GroupName="Options" x:Name="UpperLowerString" Content="Zamień małe litery na duże i odwortnie" IsChecked="True"/>
+            <RadioButton GroupName="Options" x:Name="UpperLetterFirst" Content="Zamień pierwszą literę na wielką"/>
+            <RadioButton GroupName="Options" x:Name="DeleteVowels" Content="Usuwanie samogłosek"/>
 
         </StackPanel>
     </Grid>
